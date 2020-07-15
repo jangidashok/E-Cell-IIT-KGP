@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ashok_Jangir">
+    <meta name="description" content="This is for the deonstration purpose, and presented to E-Cell">
+    <title>Quize about the JavaScript</title>
+    <style>
+        body{
+            background-image:url('./backgroundforquizaj.jpg');
+            background-size:cover;
+            background-repeat:repeat-y;
+            z-index:-1;
+        }
+        #qinfo{
+            border:1px solid rgb(251, 255, 0);
+            background-color:rgb(209, 24, 24);
+            font-size:15px;
+            border-radius:2px;
+            color:whitesmoke;
+        }
+        #heading{
+            font-size:2.8vw;
+            text-align:center;
+            color:white;
+        }
+        .quizecon{
+            position:relative;
+            left:1vw;
+            border:1px solid rgb(255, 251, 20);
+            background-color:rgba(168, 153, 177,0.8);
+            padding-left:6vw;
+            margin-top:2.5vw;
+            width:89.5vw;
+            border-radius:10px;
+        }
+        .qnumbering{
+            margin-top:15px;
+            color:ghostwhite;
+            font-size:35px;
+        }
+        .qoption{
+            line-height:35px;
+            color:white;
+            font-size:20px;
+        }
+        .qoption:hover{
+            color:yellow;
+            cursor:pointer;
+        }
+        #responsetoattemp{
+            position:relative;
+            margin-top:4vw;
+            height: 6vw;
+        }
+        #checkresult{
+            position:absolute;
+            left:25vw;
+            font-size:2vw;
+            padding:1vw;
+            background-color:green;
+            color:ivory;
+        }
+        #tryagain{
+            position:absolute;
+            right:25vw;
+            font-size:2vw;
+            padding:1vw;
+            background-color:green;
+            color:ivory;
+            text-decoration:none;
+            border:2px solid grey;
+        }
+        #ricon{
+            position:relative;
+            font-size:2.5vw;
+            font-weight:bold;
+            text-align:center;
+            height:4vw;
+            padding-top:4vw;
+            color:whitesmoke;
+        }
+        #cicon{
+            position:relative;
+            font-size:1.5vw;
+            font-weight:bold;
+            text-align:center;
+            height:6.5vw;
+            line-height:3vw;
+            color:whitesmoke;
+        }
+        #texticon{
+            position:relative;
+            font-size:1.2vw;
+            font-weight:bold;
+            text-align:center;
+            height:4.5vw;
+            line-height:2vw;
+            text-decoration:none;
+            color:whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div id="heading"> Quize ( About JavaScript ) </div>
+    <hr style="border:2px solid grey;border-radius:50%;margin-top:2vw;">
+    <div id="qinfo">Instructions :-<br>**Only one option is correct out of the given options. <br>*On answering a correct option 3 marks will awarded And 1 mark will be deducted on selecting a wrong option.</div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 1 :</div>
+        <h1 class="question">JavaScript can be consider as a ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(1,'A')" id="1A">Skeleton</li>
+            <li class="qoption" onclick="Answernote(1,'B')" id="1B">Mind</li>
+            <li class="qoption" onclick="Answernote(1,'C')" id="1C">Body</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 2 :</div>
+        <h1 class="question">JavaScript can be used ...</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(2,'A')" id="2A">Only on client side</li>
+            <li class="qoption" onclick="Answernote(2,'B')" id="2B">Only on server side</li>
+            <li class="qoption" onclick="Answernote(2,'C')" id="2C">Only in database</li>
+	    <li class="qoption" onclick="Answernote(2,'D')" id="2D">Only on client side and server side</li>
+            <li class="qoption" onclick="Answernote(2,'E')" id="2E">On client side, server side and in database also</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 3 :</div>
+        <h1 class="question">What is full-form of DOM ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(3,'A')" id="3A">Document Object Mode</li>
+            <li class="qoption" onclick="Answernote(3,'B')" id="3B">Document Oriented Mode</li>
+            <li class="qoption" onclick="Answernote(3,'C')" id="3C">Double Occured Mode</li>
+            <li class="qoption" onclick="Answernote(3,'D')" id="3D">Data Object Mode</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 4 :</div>
+        <h1 class="question">What JavaScript can't do as in-browser ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(4,'A')" id="4A">Read/Write from computer hard disk</li>
+            <li class="qoption" onclick="Answernote(4,'B')" id="4B">Access to permitted resourses</li>
+            <li class="qoption" onclick="Answernote(4,'C')" id="4C">have same origin policy</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 5 :</div>
+        <h1 class="question">What make JavaScript famous ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(5,'A')" id="5A">Full Support by HTML/CSS</li>
+            <li class="qoption" onclick="Answernote(5,'B')" id="5B">Simple API</li>
+            <li class="qoption" onclick="Answernote(5,'C')" id="5C">Support by modern browsers</li>
+            <li class="qoption" onclick="Answernote(5,'D')" id="5D">All of the above</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 6 :</div>
+        <h1 class="question">What is SOP in computing ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(6,'A')" id="6A">Some objective Programming</li>
+            <li class="qoption" onclick="Answernote(6,'B')" id="6B">Some Oriented Programming</li>
+            <li class="qoption" onclick="Answernote(6,'C')" id="6C">Same Origin Policy</li>
+            <li class="qoption" onclick="Answernote(6,'D')" id="6D">Some Original Policy</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 7 :</div>
+        <h1 class="question">What can reduce the loading time ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(7,'A')" id="7A">By adding script in body</li>
+            <li class="qoption" onclick="Answernote(7,'B')" id="7B">By adding script in head</li>
+            <li class="qoption" onclick="Answernote(7,'C')" id="7C">Both of A & B are efficient</li>
+            <li class="qoption" onclick="Answernote(7,'D')" id="7D">It doesn't matter</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 8 :</div>
+        <h1 class="question">Which is use for commenting the JavaScript ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(8,'A')" id="8A">by using the // in every required line</li>
+            <li class="qoption" onclick="Answernote(8,'B')" id="8B">by using the /* ... */ for group of lines</li>
+            <li class="qoption" onclick="Answernote(8,'C')" id="8C">Both option A & B</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 9 :</div>
+        <h1 class="question">Which one can be redeclare in variable declaration ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(9,'A')" id="9A">let</li>
+            <li class="qoption" onclick="Answernote(9,'B')" id="9B">Var</li>
+            <li class="qoption" onclick="Answernote(9,'C')" id="9C">const</li>
+            <li class="qoption" onclick="Answernote(9,'D')" id="9D">None of the above</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 10 :</div>
+        <h1 class="question">What will be result of ('name'+12+true) ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(10,'A')" id="10A">'name12'</li>
+            <li class="qoption" onclick="Answernote(10,'B')" id="10B">'nametrue'</li>
+            <li class="qoption" onclick="Answernote(10,'C')" id="10C">'name12true'</li>
+            <li class="qoption" onclick="Answernote(10,'D')" id="10D">Will consider as an error</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 11 :</div>
+        <h1 class="question">What will be result of (12+true+'name') ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(11,'A')" id="11A">'12truename'</li>
+            <li class="qoption" onclick="Answernote(11,'B')" id="11B">'12name'</li>
+            <li class="qoption" onclick="Answernote(11,'C')" id="11C">12truename</li>
+            <li class="qoption" onclick="Answernote(11,'D')" id="11D">Will consider as an error</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 12 :</div>
+        <h1 class="question">In what different type we can declare a string ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(12,'A')" id="12A">'...'</li>
+            <li class="qoption" onclick="Answernote(12,'B')" id="12B">"..."</li>
+            <li class="qoption" onclick="Answernote(12,'C')" id="12C">`...`</li>
+            <li class="qoption" onclick="Answernote(12,'D')" id="12D">All the above are true</li>
+            <li class="qoption" onclick="Answernote(12,'E')" id="12E">Only A & B are true</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 13 :</div>
+        <h1 class="question">Which will be work ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(13,'A')" id="13A">document.getElementbyId('Id_name')</li>
+            <li class="qoption" onclick="Answernote(13,'B')" id="13B">document.getElementbyClass('class_name')</li>
+            <li class="qoption" onclick="Answernote(13,'C')" id="13C">document.getElementsByName('name')</li>
+            <li class="qoption" onclick="Answernote(13,'D')" id="13D">document.getElementsByclass('class_name')</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 14 :</div>
+        <h1 class="question">Which is true Array declaration ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(14,'A')" id="14A">['name1','name2','name3']</li>
+            <li class="qoption" onclick="Answernote(14,'B')" id="14B">['name1',1,3]</li>
+            <li class="qoption" onclick="Answernote(14,'C')" id="14C">['name1',1,undefined]</li>
+            <li class="qoption" onclick="Answernote(14,'D')" id="14D">A & B are correct</li>
+            <li class="qoption" onclick="Answernote(14,'E')" id="14E">A, B & C all are correct</li>
+        </ol>
+    </div>
+    <div class="quizecon">
+        <div class="qnumbering">Question 15 :</div>
+        <h1 class="question">Which can be used for take key from Object ?</h1>
+        <ol type="A">
+            <li class="qoption" onclick="Answernote(15,'A')" id="15A">Key of Object</li>
+            <li class="qoption" onclick="Answernote(15,'B')" id="15B">Key in Object</li>
+            <li class="qoption" onclick="Answernote(15,'C')" id="15C">Both A & B</li>
+            <li class="qoption" onclick="Answernote(15,'D')" id="15D">Can't be find</li>
+        </ol>
+    </div>
+    <div id="responsetoattemp">
+        <button id="checkresult" onclick="Result()">Check Result !!</button>
+        <a id="tryagain" onclick="tryAgain()" href="#heading">Want to Try Again !</a>
+    </div>
+    <div id="ricon"></div>
+    <div id="cicon"></div>
+    <div id="texticon"></div>
+    <script>
+        let qapair = {};
+        function Answernote(qn,qa){
+            let clen = Object.keys(qapair).length;
+            if(clen == 0){
+                document.getElementById('ricon').innerHTML = '';
+                document.getElementById('cicon').innerHTML = '';
+                document.getElementById('texticon').innerHTML = '';    
+            }
+            if(qn in qapair){
+                let respo = qapair[qn];
+                let id = qn+respo;
+                document.getElementById(id).style.color = "white";
+                qapair[qn] = qa;
+                let newid = qn+qa;
+                document.getElementById(newid).style.color = "rgb(209, 24, 24)";
+            }
+            else{
+                qapair[qn] = qa;
+                let newid = qn+qa;
+                document.getElementById(newid).style.color = "rgb(209, 24, 24)";
+            }
+        }
+        function tryAgain(){
+            for(el in qapair){
+                let newid = el+qapair[el];
+                document.getElementById(newid).style.color = "white"; 
+                delete qapair[el];
+                }
+            document.getElementById('ricon').innerHTML = '';
+            document.getElementById('cicon').innerHTML = '';
+            document.getElementById('texticon').innerHTML = '';    
+        }
+        function Result(){
+            let aascript = {1:'B',2:'E',3:'A',4:'A',5:'D',6:'C',7:'A',8:'C',9:'B',10:'C',11:'B',12:'D',13:'C',14:'E',15:'B'};
+            let soo = Object.keys(qapair).length;
+            if(soo == 0){
+                alert("Please attemp the Quiz before result...");
+            }
+            else if(soo < 15)
+            {
+                let conf = confirm("There are still unanswered questions.\nWould you like to finish...");
+                let score = 0;
+                if(conf){
+                    for(element in qapair){
+                        if(qapair[element] == aascript[element]){
+                            score += 3;
+                        }
+                        else{
+                            score -= 1;
+                        }
+                    }
+                let perc = (score/45)*100;
+                document.getElementById('ricon').innerHTML = 'Result:';
+                document.getElementById('cicon').innerHTML = `Marks : ${score} Out of 45<br>${perc}%`;
+                if(perc < 70){
+                    document.getElementById('texticon').innerHTML = 'You tried your best<br>But you require to increase your knowledge';
+                }
+                else{
+                    document.getElementById('texticon').innerHTML = 'You can be proud of<br>yourself';    
+                }
+                for(el in qapair){
+                let newid = el+qapair[el];
+                document.getElementById(newid).style.color = "white"; 
+                delete qapair[el];
+                }
+                window.scrollBy(0,500);
+                }
+            }
+            else{
+                let score = 0;
+                for(element in qapair){
+                        if(qapair[element] == aascript[element]){
+                            score += 3;
+                        }
+                        else{
+                            score -= 1;
+                        }
+                }
+                let perc = (score/45)*100;
+                document.getElementById('ricon').innerHTML = 'Result:';
+                document.getElementById('cicon').innerHTML = `Marks : ${score} Out of 45<br>${perc}%`;
+                if(perc < 70){
+                    document.getElementById('texticon').innerHTML = 'You tried your best<br>But you require to increase your knowledge';
+                }
+                else{
+                    document.getElementById('texticon').innerHTML = 'You can be proud of<br>yourself';    
+                }
+                for(el in qapair){
+                let newid = el+qapair[el];
+                document.getElementById(newid).style.color = "white"; 
+                delete qapair[el];
+                }
+                window.scrollBy(0,500);
+                }
+            }
+    </script>
+</body>
+</html>

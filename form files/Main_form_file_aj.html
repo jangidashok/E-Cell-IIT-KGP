@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is for the deonstration purpose, and presented to E-Cell">
+    <meta name="author" content="Ashok_Jangir">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image:url('./backgroundforformaj.jpg');
+            background-size:cover;
+            background-repeat:repeat-y;
+        }
+        #heading{
+            font-size:2.8vw;
+            font-family: 'Roboto Slab', serif;
+            text-align:center;
+            margin-top:3vw;
+            margin-bottom:1vw;
+            color:honeydew;
+        }
+        #forhr{
+            width:63vw;
+            border:2px solid gray;
+            margin-bottom:3vw;
+        }
+        #instruction{
+            margin:3vw 12vw;
+            font-size:2vw;
+            color:honeydew;
+        }
+        .overallcontainertoinput{
+            position:relative;
+            margin:1.5vw;
+            border-radius:2vw;
+            border:1px solid gold;
+            background-color:whitesmoke;
+        }
+        .forlabel{
+            padding-left:10vw;
+            padding-top:4vw;
+            font-size:1.5vw;
+        }
+        .outertoinput{
+            padding:1.5vw;
+            padding-left:10vw;
+            padding-bottom:4vw;
+        }
+        .input{
+            font-size:1.5vw;
+            border-width:0px 0px 2px 0px;
+            background-color:whitesmoke;
+            width:80vw;
+            outline:none;
+        }
+        .spefol{
+            padding-bottom:4vw;
+        }
+        #forselector{
+            font-size:1.2vw;
+            border:0px 0px;
+        }
+        #forcheckbox{
+            width:1.5vw;
+            height:1.5vw;
+        }
+        #submitbutton{
+            font-size:2vw;
+            margin:4vw 40vw;
+            padding:1.2vw;
+            background-color:rgb(133, 10, 10);
+            color:honeydew;
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">$&nbsp;&nbsp; Submit the form to enroll Yourself&nbsp;&nbsp; $</div>
+    <hr id="forhr">
+    <div id="instruction">>>&nbsp;&nbsp; All fields with <span style="color:red;">*</span>(steric) are mandatory !</div>
+    <form action="#">
+    <div class="overallcontainertoinput">
+        <div class="forlabel">
+            <label for="name">Name<span style="color:red">*</span>&nbsp;&nbsp;&nbsp; :</label>
+        </div>
+        <div class="outertoinput">
+            <input class="input" type="text" name="forname" id="name" spellcheck="false" placeholder="Your response..." required>
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel">
+            <label for="email">Email<span style="color:red">*</span>&nbsp;&nbsp;&nbsp; :</label>
+        </div>
+        <div class="outertoinput">
+            <input class="input" type="email" name="foremail" id="email" spellcheck="false" placeholder="Your response..." required>
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel">
+            <label for="mobile">Mobile Number<span style="color:red">*</span>&nbsp;&nbsp;&nbsp; :</label>
+        </div>
+        <div class="outertoinput">
+            <input class="input" type="tel" name="formobile" id="mobile" placeholder="Your response..." required>
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel">
+            <label for="dob">Date of Birth<span style="color:red">*</span>&nbsp;&nbsp;&nbsp; :</label>
+        </div>
+        <div class="outertoinput">
+            <input class="input" type="date" name="fordob" id="dob" placeholder="Your response" required>
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel">
+            <label for="gender">Gender<span style="color:red">*</span>&nbsp;&nbsp;&nbsp; :</label>
+        </div>
+        <div class="outertoinput">
+            <input type="radio" name="forgender" id="gender" required>Male<br>
+            <input type="radio" name="forgender" id="gender" required>Female<br>
+            <input type="radio" name="forgender" id="gender" required>Other
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel">
+            <label for="postaddress">Your nearer post-address Number&nbsp;&nbsp;&nbsp; :</label>
+        </div>
+        <div class="outertoinput">
+            <input class="input" type="number" name="forpostaddress" id="postaddress" placeholder="Your response...">
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel spefol">
+            <label for="start">When you want to start<span style="color:red">*</span>&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp; <select id="forselector" name="forstart"
+                    id="start">
+                    <option value="August" selected>August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                </select></label>
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel">
+            <label for="words">Express your views regarding this &nbsp;&nbsp;&nbsp; :</label>
+        </div>
+        <div class="outertoinput">
+            <textarea class="input" name="forwords" id="words" placeholder="Your response..." rows="1" cols="10"></textarea>
+        </div>
+    </div>
+    <div class="overallcontainertoinput">
+        <div class="forlabel spefol">
+            <label for="agree">Have you read the term-condition<span style="color:red">*</span> : &nbsp;&nbsp;&nbsp;&nbsp;<input id="forcheckbox" type="checkbox"
+                    name="foragree" id="agree" checked></label>
+        </div>
+    </div>
+    <button id="submitbutton" type="submit" value="Submit">Submit Responses</button>
+    </form>
+</body>
+
+</html>

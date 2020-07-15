@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ashok_Jangir">
+    <meta name="description" content="This is for the deonstration purpose, and presented to E-Cell">
+    <title>Countdown Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Galada&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image:url('./backgroundforcountdowntimeraj.jpg');
+            background-size:cover;
+            color:aliceblue;
+        }
+        #heading{
+            text-align:center;
+            font-size:6vw;
+            padding:1vw;
+            font-family: 'Abril Fatface', cursive;
+        }
+        #description{
+            text-align:center;
+            font-size:5vw;
+            padding:3vw;
+            font-family: 'Galada', cursive;
+            padding-bottom:1vw;
+        }
+        #timeremain{
+            text-align:center;
+            font-size:4vw;
+            padding:0vw;
+            line-height:6.5vw;
+        }
+    </style>
+</head>
+<body>
+      <div id="heading">Countdown Timer :</div>
+      <div id="description">Time remain to reach 20 July,2020 00:00:00</div>
+      <div id="timeremain"></div>
+      <script>
+          let targettime = new Date("July 20, 2020 00:00:00").getTime();
+          
+          let trial = new Date().getTime();
+
+          let getelement = document.getElementById('timeremain');
+          
+          if((targettime-trial)>0){
+            
+            function setthetime(){
+            
+                let thistime = new Date().getTime();
+                let differenceintime = targettime-thistime;
+            
+                if(differenceintime>0){
+                    let days = Math.floor(differenceintime/(24*60*60*1000));
+                    let hours = Math.floor((differenceintime%(1000*60*60*24))/(1000*60*60));
+                    let minutes = Math.floor((differenceintime%(1000*60*60))/(1000*60));
+                    let seconds = Math.floor((differenceintime%(1000*60))/1000);
+                    getelement.innerHTML = `Days : ${days} <br>Hours : ${hours}<br>Minutes : ${minutes}<br>Seconds  : ${seconds}`;
+                }
+                else{
+                    getelement.innerHTML = "Time has already reached.<br>please, change the time (your target time) from script.";
+                    clearInterval(si);
+                }
+          }
+          let si = setInterval(setthetime,1000);
+          }
+          else{
+            getelement.innerHTML = "Time has already reached.<br>please, change the time (your target time) from script.";
+          }
+      </script>
+</body>
+</html>

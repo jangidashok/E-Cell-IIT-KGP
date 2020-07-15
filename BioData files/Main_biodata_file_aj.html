@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="This is for the deonstration purpose, and presented to E-Cell">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ashok_Jangir">
+        <title>BioData</title>
+        <link href="https://fonts.googleapis.com/css2?family=Modak&family=Parisienne&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+        <style>
+            body{
+                margin:0px;
+                background-image:url('./backgroundmainbiodataaj.jpg');
+                background-repeat:repeat-y;
+                background-size: cover;
+                z-index: -1;
+            }
+            @media (min-width:768px){
+            .overclass{
+                position:relative;
+                display:inline-block;
+            }
+            #namecol{
+                width:31vw;
+                height:150px;
+            }
+            #navbarcol{
+                width:67vw;
+                height:150px;
+            }
+            #propiccol{
+                width:33vw;
+                height:520px;
+            }
+            #discol{
+                width:65vw;
+                height:520px;
+            }
+            #footercol{
+                position:fixed;
+                bottom:0;
+                left:0;
+                width:100vw;
+                height:3vw;
+                background-color:rgb(14, 165, 64);
+                border-radius:10px;
+                border:2px solid rgb(221, 243, 23);
+            }
+            .paclass{
+                position:absolute;
+            }
+            #mname{
+                bottom: 37px;
+                right: 0vw;
+                display: inline;
+                font-family: 'Modak', cursive;
+                font-size: 4vw;
+            }
+            #wname{
+                top: 100px;
+                right: 5.5vw;
+                font-family: 'Parisienne', cursive;
+                font-size: 2.7vw;
+            }
+            #navabove{
+                left:4vw;
+                bottom:30px;
+            }
+            .navmenu{
+                display:inline-block;
+                border:1.5px solid bisque;
+                text-decoration:none;
+                background-color:rgba(234, 238, 22, 0.829);
+                color:ivory;
+                width:12vw;
+                text-align:center;
+                padding: 9px;
+                font-size: 20px;
+                border-radius:15px;
+                margin-right: 0.5vw;
+                transition:all 0.5s ease-in-out;
+            }
+            .navmenu:hover{
+                background-color:rgba(177, 238, 238, 0.8);
+                color:rgb(235, 23, 0);
+            }
+            .navmenu:active{
+                background-color:rgb(34, 163, 163);
+                color:ivory;
+            }
+            #propic{
+                top: 25px;
+                left: 0.5vw;
+                width: 32vw;
+                height: 32vw;
+                border-radius: 50%;
+                border:2px solid rgb(241, 25, 10);
+                transform:rotate(-10deg);
+            }
+            #descriptionhead{
+                top: 2vw;
+                left: 10vw;
+                font-family: 'Montserrat Subrayada', sans-serif;
+                font-size: 4vw;
+            }
+            #descriptionmain{
+                top:13vw;
+                left:10vw;
+                right:5vw;
+                font-size:2vw;
+                text-align:justify;
+                font-family: 'Dancing Script', cursive;
+            }
+            .fclass{
+                top:0.9vw;
+                color:rgba(221, 240, 240, 0.8);
+                font-size:1.2vw;
+            }
+            #froll{
+                left:10vw;
+            }
+            #femail{
+                right:10vw;
+            }
+            }
+            @media (max-width:768px){
+            .overclass{
+                position:relative;
+                display:inline-block;
+            }
+            #namecol{
+                width:100vw;
+                height:100px;
+            }
+            #navbarcol{
+                width:100vw;
+                height:40px;
+            }
+            #propiccol{
+                width:100vw;
+                height:250px;
+            }
+            #discol{
+                width:100vw;
+                height:400px;
+            }   
+            #footercol{
+                position:fixed;
+                bottom:0;
+                left:0;
+                width:100vw;
+                height:3vw;
+                background-color:rgb(14, 165, 64);
+                border-radius:10px;
+                border:2px solid rgb(221, 243, 23);
+            }
+            .paclass{
+                position:absolute;
+            }
+            #mname{
+                display: inline;
+                bottom: 50px;
+                right:36.5vw;
+                font-family: 'Modak', cursive;
+                font-size: 4vw;
+            }
+            #wname{
+                top: 42px;
+                right: 41.5vw;
+                font-family: 'Parisienne', cursive;
+                font-size: 2.7vw;
+            }
+            #navabove{
+                left:9vw;
+                bottom:12px;
+            }
+            .navmenu{
+                display:inline-block;
+                border:1.5px solid bisque;
+                text-decoration:none;
+                background-color:rgba(234, 238, 22, 0.829);
+                color:ivory;
+                width:17vw;
+                text-align:center;
+                padding: 1.2vw;
+                font-size: 5vw;
+                border-radius:15px;
+                margin-right: 0.5vw;
+                transition:all 0.5s ease-in-out;
+            }
+            .navmenu:hover{
+                background-color:rgba(177, 238, 238, 0.8);
+                color:rgb(235, 23, 0);
+            }
+            .navmenu:active{
+                background-color:rgb(34, 163, 163);
+                color:ivory;
+            }
+            #propic{
+                top: 10px;
+                left: 25.5vw;
+                width: 49vw;
+                height: 40vw;
+                border-radius: 50%;
+		transform:rotate(-10deg);
+            }
+            #descriptionhead{
+                top: 10vw;
+                left: 30vw;
+                font-family: 'Montserrat Subrayada', sans-serif;
+                font-size: 4vw;
+            }
+            #descriptionmain{
+                top:20vw;
+                left:15vw;
+                right:15vw;
+                font-size:5vw;
+                text-align:justify;
+                font-family: 'Dancing Script', cursive;
+            }
+            .fclass{
+                top:0.9vw;
+                color:rgba(221, 240, 240, 0.8);
+                font-size:1.2vw;
+            }
+            #froll{
+                left:10vw;
+            }
+            #femail{
+                right:10vw;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="namecol" class="overclass">
+            <div id="mname" class="paclass">ASHOK JANGIR</div>
+            <div id="wname" class="paclass">Web Developer</div>
+        </div>
+        <div id="navbarcol" class="overclass">
+            <div id="navabove" class="paclass">
+                <a href="#" class="navmenu" target="_blank">Home</a>
+                <a href="./Biodata_CV_aj.html" class="navmenu" target="_blank">CV</a>
+                <a href="./Biodata_contact_aj.html" class="navmenu" target="_blank">Contact</a>
+                <a href="./Biodata_others_aj.html" class="navmenu" target="_blank">Others</a>
+            </div>
+        </div>
+        <div id="propiccol" class="overclass">
+            <img src="./ashokphotoaj.jpg" alt="Image is loading..." id="propic" class="paclass">
+        </div>
+        <div id="discol" class="overclass">
+            <span id="descriptionhead" class="paclass">Hello,<br>a bit about me :<br></span>
+            <p id="descriptionmain" class="paclass">Myself Ashok Jangir,a web developer studying at Indian Institute of Technology ,Kharagpur. I love to learn logical things ,this make me happy and satisfaction. That's why I select web development so that I can do something imaginary logical things. Other than web development I like to play Badminton and field hockey And sometimes reading books also entertain me.</p>
+        </div>
+        <div id="footercol" class="overclass">
+            <span id="froll" class="fclass paclass">Roll No. : 19CE10012 </span>
+            <span id="femail" class="fclass paclass">Email Id : iamashokjangiriitkgp19@gmail.com </span>
+        </div>
+    </body>
+</html>

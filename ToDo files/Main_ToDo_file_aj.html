@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ashok_Jangir">
+    <meta name="description" content="This is for the deonstration purpose, and presented to E-Cell">
+    <title>ToDo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image:url('./backgroundtodoaj.jpg');
+            background-size:cover;
+        }
+        #heading{
+            font-size:3vw;
+            text-align:center;
+            padding:1vw;
+            border-radius:10px;
+            font-family: 'Galada', cursive;
+        }
+        #inputcon{
+            position:relative;
+            background-color:red;
+            height:5vw;
+            margin-top:2px;
+            border-radius:10px;
+        }
+        #inputplace{
+            position:absolute;
+            left:10vw;
+            top:25%;
+            width:40vw;
+            height:2vw;
+            padding-left:5vw;
+            border-radius:5px;
+            font-size:1vw;
+        }
+        #addoption{
+            position:absolute;
+            right:30vw;
+            top:25%;
+            width:5vw;
+            height:2vw;
+            border:2px solid cornsilk;
+            padding-left:2vw;
+            padding-top:0.6vw;
+            border-radius:5px;
+            color:cornsilk;
+            background-color:rgb(209, 94, 94);
+            font-size:1vw;
+            cursor:pointer;
+        }
+        #grating{
+            position:relative;
+            border:2px solid goldenrod;
+            background-color:rgb(6, 192, 199);
+            height:7vw;
+            padding-top:1.25vw;
+            font-size:2.5vw;
+            color:wheat;
+            text-align:center;
+        }
+        .eventscp{
+            position:relative;
+            padding-left:7vw;
+            border:1px solid goldenrod;
+            background-color:hotpink;
+            height:3vw;
+            padding-top:1vw;
+            font-size:1.5vw;
+            color:white;
+            margin:2px;
+        }
+        .close{
+            position:absolute;
+            top:0;
+            right:0;
+            font-size:3.5vw;
+            padding-left:3vw;
+            padding-right:3vw;
+        }
+        .close:hover{
+            background-color:rgb(177, 39, 39);
+        }
+        .donesymbol{
+            display:none;
+            position:absolute;
+            top:0.5vw;
+            left:2.5vw;
+            width:0.85vw;
+            height:2vw;
+            border-bottom:0.35vw solid green;
+            border-right:0.35vw solid green; 
+            transform:rotate(43deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        Add Your events which you want to do :
+    </div>
+    <div id="inputcon">
+        <input name="foreventname" placeholder="Write the name of event..." id="inputplace">
+        <span id="addoption" onclick="createNew()">Add me</span>
+    </div>
+    <div id="grating">Have a nice day !!<br>( Click on event to check the event to show that its done )</div>
+    <script>
+        function createNew(){
+            let string = document.getElementById('inputplace').value;
+            document.getElementById('inputplace').value = '';
+            if(string == ''){
+                alert('Enter the name of event');
+            }
+            else{
+                //making close option to event
+                let closetag = document.createElement('SPAN');
+                closetag.setAttribute('class','close');
+                closetag.innerHTML = '&#x00D7;';
+                //adding event listner to the close, on click
+                closetag.addEventListener("click", function() {
+                    var forparent = this.parentElement;
+                    forparent.style.display = "none";
+                });
+                //making complete option to event
+                let donetag = document.createElement('SPAN');
+                donetag.setAttribute('class','donesymbol');
+                //making the event
+                let newitem = document.createElement('P');
+                newitem.innerHTML = string;
+                newitem.setAttribute('class','eventscp');
+                //just add close option to event
+                newitem.appendChild(closetag);
+                //just add complete option to event
+                newitem.appendChild(donetag);
+                //add event listner for the complete option
+                newitem.addEventListener('click',function(){
+                    let child = this.childNodes;
+                    if(child[2].style.display == 'none'){
+                        child[2].style.display = 'inline';
+                    }
+                    else{
+                        child[2].style.display = 'none';
+                    }
+                })
+                //just add the elevent
+                document.body.appendChild(newitem);
+            }
+        }
+
+    </script>
+</body>
+</html>
